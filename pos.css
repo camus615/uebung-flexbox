@@ -24,37 +24,51 @@ section {
   min-height: 300px;
 }
 
-.row {
+.row { /*Reihe*/
   width: 100%;
   min-width: 10px;
   padding: 1rem 0;
   min-height: 300px;
+  display: flex; /*Flexbox*/
+  justify-content: space-around; /*alle Balken stehen auf der rechten Seite; display flex ist notwendige Bedigung dafür, das justify-content (Ausrichtung des Inhalts)funktioniert* - = Verschiebung auf der Horizontalen*/
+  align-items: stretch; /*Verschiebung von Elementen auf der Vertikalen*/
+  flex-direction: row-reverse;
 }
 
-.col {
+.col { /*Spalte*/
   min-width: 20px;
   min-height: 20px;
-  margin: 10px;
+  margin: 5px;
+  /*order:0 ist die Standardordnung, die so nicht aufgeführt wird*/ 
+  flex-grow: 1; 
+  /*alternative, wenn alle die gleiche Größe haben sollen, da alle Farben auch in der Klasse "col"*/
 }
 
 .trolley-grey {
   background: #7d7c84;
+  order: 1;
+  flex-grow:1;
 }
 
 .sea-green {
   background: #2d93ad;
+  flex-grow: 1;
 }
 
 .middle-red {
   background: #de8f6e;
+  flex-grow: 1;
 }
 
 .black {
   background: #000;
+  flex-grow: 1;
 }
 
 .orange {
-  background: orange;
+  background: orange; 
+  order: -1;
+  flex-grow: 1;
 }
 
 .olive {
